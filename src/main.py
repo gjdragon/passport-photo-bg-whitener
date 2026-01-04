@@ -14,7 +14,7 @@ class PassportPhotoEditor:
     def __init__(self, root):
         """Initialize the application with the main window."""
         self.root = root
-        self.root.title("Passport Photo Editor v1.0.1")
+        self.root.title("Passport Photo Editor")
         self.root.geometry("1000x750")
         self.root.configure(bg="#f0f0f0")
 
@@ -165,7 +165,7 @@ class PassportPhotoEditor:
             self.root.title(
                 f"Passport Photo Editor - {os.path.basename(file_path)}")
 
-    def update_preview(self, *args):
+    def update_preview(self, _=None):
         """Update the image preview with current adjustment values."""
         if self.original_image is None:
             return
